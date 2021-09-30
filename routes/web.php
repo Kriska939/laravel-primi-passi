@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // dichiaro qui cosa si deve vedere in homepage:
 
-    $name = "Cristina";
-    return view('home', compact('name'));
+    $data = ['name' => 'Cristina',
+             'text' => 'Testo Homepage Testo Homepage
+             Testo Homepage Testo Homepage Testo Homepage',
+            'lista_studenti' => [
+                'Marco Rossi',
+                'Filippo Neri',
+                'Paolo Verdi',
+                'Maria Bianchi'
+            ]
+        ];
+    return view('home', $data);
 });
