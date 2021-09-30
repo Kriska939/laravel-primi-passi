@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    // dichiaro qui cosa si deve vedere in homepage:
+
+    $name = "Cristina";
+    return view('home', compact('name'));
 });
